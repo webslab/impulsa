@@ -1,13 +1,13 @@
-export const SITE_TITLE = "Base";
-export const SITE_DESCRIPTION = "Welcome to Base!";
+export const SITE_TITLE = "Impulsa";
+export const SITE_DESCRIPTION = "Welcome to Impulsa!";
 
 // TODO: Change to production URL
 export const DB = {
 	url: "ws://localhost:8000/",
 	config: {
 		access: "user",
-		database: "test",
-		namespace: "test",
+		database: "impulsa",
+		namespace: "webslab",
 	},
 };
 
@@ -15,7 +15,7 @@ export const DB = {
 // 	url: 'https://db.lab.kennycallado.dev/',
 // 	config: {
 // 		access: 'user',
-// 		database: 'webslab',
-// 		namespace: 'base',
+// 		database: 'impulsa',
+// 		namespace: 'webslab',
 // 	},
 // }

@@ -2,7 +2,7 @@
 import Link from './Link.astro'
 
 import { Image } from 'astro:assets'
-import brand from '$images/brand-base.png'
+import brand from '$images/brand-impulsa.png'
 
 interface Props {
   loginSelector: string;
@@ -62,7 +62,7 @@ const { loginSelector } = Astro.props;
           <Link
             class="nav-link"
             href="/about/">
-            About
+            Equipo
           </Link>
         </li>
 
@@ -79,7 +79,7 @@ const { loginSelector } = Astro.props;
             id="nav-modules"
             class="nav-link disabled"
             href="/content/modules/">
-            Modules
+            Formación
           </Link>
         </li>
 
@@ -90,7 +90,7 @@ const { loginSelector } = Astro.props;
             data-bs-toggle="dropdown"
             aria-expanded="false"
             href="#">
-            Access
+            Acceso
           </a>
 
           <ul
@@ -172,7 +172,7 @@ const { loginSelector } = Astro.props;
         const navLogin = document.getElementById('nav-login')
         const navAdmin = document.querySelectorAll('[data-admin]')
         const navLogout = document.getElementById('nav-logout')
-        const navModules = document.getElementById('nav-modules')
+        // const navModules = document.getElementById('nav-modules')
 
         document.addEventListener('DOMContentLoaded', async () => {
           try {
@@ -181,11 +181,11 @@ const { loginSelector } = Astro.props;
             if (authService.isAuthenticated()) {
               navLogin.classList.add('disabled')
               navLogout.classList.remove('disabled')
-              navModules.classList.remove('disabled')
+              // navModules.classList.remove('disabled')
             } else {
               navLogin.classList.remove('disabled')
               navLogout.classList.add('disabled')
-              navModules.classList.add('disabled')
+              // navModules.classList.add('disabled')
             }
 
             if (authService.isAuthenticated() && authService.isAdministrator()) {
