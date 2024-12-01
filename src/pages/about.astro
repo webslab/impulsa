@@ -4,8 +4,8 @@ import { Image } from 'astro:assets'
 
 import BaseLayout from '$layouts/Base.astro'
 
-// import teamMain from '$images/about_team-group.webp'
-import teamMain from '$images/about_team-group_cartoon.png'
+import teamMain from '$images/about/team-group.png'
+import teamRosa from '../_includes/images/about/team-rosa.png'
 
 const groupOne = await getCollection('members', ({ data }) => {
   return data.group === 1;
@@ -22,7 +22,8 @@ img {
   filter: grayscale(10%);
 }
 
-img:hover {
+/* img:hover { */
+#team-main:hover {
   border: 2px solid var(--bs-primary) !important;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7) !important;
   filter: grayscale(0);
@@ -34,8 +35,8 @@ img:hover {
   admin={false}
   title="About us"
   description="About the project and its memembers">
-  <section class="container p-md-4 mx-auto text-center">
-    <h1>Who we are!</h1>
+  <section class="px-0 px-md-4 py-4 mx-auto text-center">
+    <h1>¿Quiénes somos?</h1>
 
     <div class="row justify-content-center">
       <div class="col col-md-9">
@@ -47,7 +48,8 @@ img:hover {
 
     <div style="max-width: 720px; margin: 0 auto;">
       <Image
-        class="img-fluid border border-2 rounded shadow-sm"
+        id="team-main"
+        class="img-fluid border border-2  rounded shadow-sm"
         src={teamMain}
         format={'webp'}
         widths={[240, 540, 720, teamMain.width]}
@@ -58,27 +60,27 @@ img:hover {
 
   <hr class="my-4" />
 
-  <section class="container my-4 p-md-4 mx-auto">
-    <h2 class="h3 text-center">Principal:</h2>
+  <section class="px-0 px-md-4 py-4 mx-auto">
+    <h2 class="h3 text-center">Investigadora Principal:</h2>
 
     <div class="row mt-4">
       <div class="col-sm-12 col-lg-4 text-center">
         <Image
-          class="border border-2 rounded-circle"
-          src="https://s.gravatar.com/avatar/310cdbc78789720313000310fbca4bca?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fbm.png"
+          class=""
+          src={teamRosa}
           format={'webp'}
-          width={160}
-          height={160}
-          alt="Principal member" />
+          width={teamRosa.width / 4}
+          height={teamRosa.height / 4}
+          alt="Investigadora princiap" />
 
-        <h3 class="h4 text-primary">Base Manager</h3>
+        <h3 class="h4 text-primary">Rosa Baños</h3>
       </div>
 
-      <div class="col ms-3 mt-3 mt-md-0 d-flex">
+      <div class="col ms-3 d-flex">
         <div class="my-auto">
-          <p class="h5"><u>Title</u></p>
-          <p style="text-align: justify;">
-            Departamento de Personalidad, Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea architecto hic impedit at eum sint iste quia voluptatum.
+          <p class="h5"><u>Catedrática de Psicopatología</u></p>
+          <p>
+            Departamento de Personalidad, Evaluación y Tratamientos Psicológicos (UVEG). Instituto Polibienestar. Jefa del grupo B06/03/0052 Centro de Investigación Biomédica en Red Fisiopatología de la Obesidad y Nutrición (CIBERobn, Instituto Carlos III).
           </p>
         </div>
       </div>
@@ -87,21 +89,23 @@ img:hover {
 
   <hr class="w-75 mx-auto my-4 border border-primary" />
 
-  <section class="container my-4 p-md-4 mx-auto">
+  <section class="px-0 px-md-4 py-4 mx-auto">
     <h2 class="h4">Group One:</h2>
 
-    <div class="row gap-3 justify-content-center">
+    <div class="row gap-2 justify-content-center">
       {
       groupOne.map((member) => (
       <div
         style="position: relative; margin-top: 100px;"
-        class="card col-12 col-md-4">
+        class="card col-12 col-sm-10 col-md-5 col-lg-4 col-xl-3">
+
+          <!-- class="border border-2 border-primary-subtle rounded-circle mt-2 mx-auto" -->
         <Image
           style="position: absolute; top: -100px; left: 50%; transform: translateX(-50%);"
-          class="border border-2 rounded-circle mt-2 mx-auto"
+          class="mt-2 mx-auto"
           format={'webp'}
-          width={140}
-          height={140}
+          width={member.data.photo.width / 5}
+          height={member.data.photo.height / 5}
           src={member.data.photo}
           alt="member photo" />
 
@@ -123,7 +127,7 @@ img:hover {
 
   <hr class="w-75 mx-auto my-4 border border-primary" />
 
-  <section class="container my-4 p-md-4 mx-auto">
+  <section class="px-0 px-md-4 py-4 mx-auto">
     <h2 class="h4">Group Two:</h2>
 
     <div class="row gap-3 justify-content-center">
@@ -131,13 +135,13 @@ img:hover {
       groupTwo.map((member) => (
       <div
         style="position: relative; margin-top: 100px;"
-        class="card col-12 col-md-4">
+        class="card col-12 col-sm-10 col-md-5 col-lg-4 col-xl-3">
         <Image
           style="position: absolute; top: -100px; left: 50%; transform: translateX(-50%);"
-          class="border border-2 rounded-circle mt-2 mx-auto"
+          class="mt-2 mx-auto"
           format={'webp'}
-          width={140}
-          height={140}
+          width={member.data.photo.width / 5}
+          height={member.data.photo.height / 5}
           src={member.data.photo}
           alt="member photo" />
 
@@ -159,7 +163,17 @@ img:hover {
 
   <hr class="w-75 mx-auto my-4 border border-primary" />
 
-  <section class="container my-4 p-md-4 mx-auto"></section>
+  <section class="px-0 px-md-4 py-4 mx-auto"></section>
 
   <hr class="my-4" />
+
+  <section class="px-0 px-md-4 py-4 mx-auto">
+    <h2 class="mb-4 h4 text-primary text-center">
+      Con la colaboración del grupo de investigación Labpsitec - UJI
+    </h2>
+
+    <p class="lead text-center">
+      Azucena García Palacios, Juana María Bretón López, Soledad Quero Castellano y Sara Fernández Buendía 
+    </p>
+  </section>
 </BaseLayout>
