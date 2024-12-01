@@ -1,0 +1,91 @@
+---
+import { Image } from 'astro:assets'
+
+import imageFocal from '$images/study-focal.jpg'
+---
+
+<h4 class="mb-4 text-center h3">
+  <u>Estudio con grupos focales</u>
+</h4>
+
+<div class="row">
+  <div class="col d-none d-lg-block">
+    <Image
+      loading="lazy"
+      class="img-fluid mb-4 rounded"
+      src={imageFocal}
+      format={'webp'}
+      widths={[540, 720]}
+      sizes={`(max-width: 1200px) 540px, 720px`}
+      alt="close up people learning together"/>
+  </div>
+
+  <div class="col">
+    <dl>
+      <dt class="text-primary">Participación</dt>
+      <dd>
+        <p class="ms-3">
+          <span
+            style="
+              display: list-item;
+              list-style-position: inside;
+            "
+            class="text-danger">Cerrado</span>
+        </p>
+      </dd>
+
+      <dt class="text-primary">¿En qué estado se encuentra?</dt>
+      <dd>
+        <p class="ms-md-3">Análisis de resultados y redacción del artículo</p>
+      </dd>
+
+      <dt class="text-primary">Tipo de estudio</dt>
+      <dd>
+        <p class="ms-md-3">Evaluación</p>
+      </dd>
+
+      <dt class="text-primary">Duración</dt>
+      <dd>
+        <p class="ms-md-3">
+          1 sesión
+        </p>
+      </dd>
+
+      <dt class="text-primary">Fecha de inicio</dt>
+      <dd>
+        <p class="ms-md-3">Febrero 2023</p>
+      </dd>
+    </dl>
+  </div>
+</div>
+
+<dl>
+  <dt class="text-primary">Objetivos</dt>
+  <dd>
+    <p class="ms-md-3">
+      Explorar el impacto de los diferentes trastornos mentales en los valores, fortalezas y bienestar. Y explorar las preferencias tecnológicas en el co-diseño de una intervención digital móvil para la promoción de su bienestar
+    </p>
+  </dd>
+
+  <dt class="text-primary">Descripción</dt>
+  <dd>
+    <p class="ms-md-3">
+      Este estudio consistió la realización de varios grupos focales. Cada grupo focal consistía en sesión de un día organizada en un ambiente tranquilo y colaborativo, en la que grupos de 3 a 10 personas dialogaron sobre aspectos positivos de su vida. Durante la sesión, los participantes discutieron temas como las actividades que realizan para mejorar su bienestar, sus valores personales, y si estos valores guían sus acciones cotidianas. También reflexionaron sobre sus fortalezas personales, su uso en la vida diaria, y su percepción respecto a un enfoque terapéutico basado en aspectos positivos.
+    </p>
+
+    <p class="ms-md-3">
+      La segunda parte de la sesión se centraba en los aspectos tecnológicos de una aplicación móvil para promover la salud mental positiva. Durante esta parte, se mostró un breve video con un diseño de lo que será Impulsa, una futura aplicación diseñada para mejorar el bienestar a través de ejercicios enfocados en promover emociones positivas, valores y fortalezas. Posteriormente, los participantes compartieron sus opiniones y preferencias tecnológicas, contribuyendo activamente al co-diseño de esta plataforma en función de sus necesidades y deseos.
+    </p>
+  </dd>
+
+  <dt class="text-primary">Población objetivo</dt>
+  <dd>
+    <p class="ms-md-3">
+      Tr. emocionales, adaptativos, TLP, por juego y supervivientes de cáncer de mama.
+    </p>
+  </dd>
+</dl>
+
+<p class="text-center text-primary lead">
+  #Evaluación #TrastornosMentales #GruposFocales
+</p>

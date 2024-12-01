@@ -1,0 +1,101 @@
+---
+import { Image } from 'astro:assets'
+
+import imageValor from '$images/study-valor.jpg'
+---
+
+<h4 class="mb-4 text-center h3">
+  <u>Estudio EMI valores</u>
+</h4>
+
+<div class="row">
+  <div class="col d-none d-lg-block">
+    <Image
+      loading="lazy"
+      class="img-fluid mb-4 rounded"
+      src={imageValor}
+      format={'webp'}
+      widths={[540, 720]}
+      sizes={`(max-width: 1200px) 540px, 720px`}
+      alt="girl listening music via headphones with smile"/>
+  </div>
+
+  <div class="col">
+    <dl>
+      <dt class="text-primary">Participación</dt>
+      <dd>
+        <p class="ms-3">
+          <span
+            style="
+              display: list-item;
+              list-style-position: inside;
+            "
+            class="text-success">Abierto
+            <a
+              href="#">
+              Haz click para participar
+            </a>
+          </span>
+        </p>
+      </dd>
+
+      <dt class="text-primary">¿En qué estado se encuentra?</dt>
+      <dd>
+        <p class="ms-md-3">
+          En proceso de reclutamiento
+        </p>
+      </dd>
+
+      <dt class="text-primary">Tipo de estudio</dt>
+      <dd>
+        <p class="ms-md-3">Intervención</p>
+      </dd>
+
+      <dt class="text-primary">Duración</dt>
+      <dd>
+        <p class="ms-md-3">
+          8 días
+        </p>
+      </dd>
+
+      <dt class="text-primary">Fecha de inicio</dt>
+      <dd>
+        <p class="ms-md-3">Noviembre 2024</p>
+      </dd>
+    </dl>
+  </div>
+</div>
+
+<dl>
+  <dt class="text-primary">Objetivos</dt>
+  <dd>
+    <p class="ms-md-3">
+      Probar la eficacia de una intervención basada en valores para la promoción de la salud mental.
+    </p>
+  </dd>
+
+  <dt class="text-primary">Descripción</dt>
+  <dd>
+    <p class="ms-md-3">
+      Este estudio emplea un enfoque conocido como EMI (ecological momentary intervention o intervención ecológica momentánea), que consiste en administrar pequeñas dosis de intervención, incluyendo estrategias o ejercicios breves. Para participar, necesitarás primero completar una encuesta inicial y seguidamente descargar una aplicación de salud mental que te enviará una notificación diaria durante 7 días. Cada notificación contendrá diferentes ejercicios enfocados en diversos aspectos de los valores.
+    </p>
+  </dd>
+
+  <dt class="text-primary">Población objetivo</dt>
+  <dd>
+    <p class="ms-md-3">
+      Población general mayor de edad
+    </p>
+  </dd>
+
+  <dt class="text-primary">Contacto</dt>
+  <dd>
+    <p class="ms-md-3">
+      <a href="mailto:impulsa.prometeo@gmail.com">impulsa.prometeo@gmail.com</a>
+    </p>
+  </dd>
+</dl>
+
+<p class="text-center text-primary lead">
+  #Intervención #EMI #Valores
+</p>

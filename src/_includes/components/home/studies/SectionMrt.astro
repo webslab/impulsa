@@ -1,0 +1,91 @@
+---
+import { Image } from 'astro:assets'
+
+import imageMrt from '$images/study-mrt.jpg'
+---
+
+<h4 class="mb-4 text-center h3">
+  <u>Estudio MRT valores</u>
+</h4>
+
+<div class="row">
+  <div class="col d-none d-lg-block">
+    <Image
+      loading="lazy"
+      class="img-fluid mb-4 rounded"
+      src={imageMrt}
+      format={'webp'}
+      widths={[540, 720]}
+      sizes={`(max-width: 1200px) 540px, 720px`}
+      alt="girl hiking on a valley"/>
+  </div>
+
+  <div class="col">
+    <dl>
+      <dt class="text-primary">Participación</dt>
+      <dd>
+        <p class="ms-3">
+          <span
+            style="
+              display: list-item;
+              list-style-position: inside;
+            "
+            class="text-warning">Próximamente</span>
+        </p>
+      </dd>
+
+      <dt class="text-primary">¿En qué estado se encuentra?</dt>
+      <dd>
+        <p class="ms-md-3">
+          En proceso de diseño
+        </p>
+      </dd>
+
+      <dt class="text-primary">Tipo de estudio</dt>
+      <dd>
+        <p class="ms-md-3">Intervención</p>
+      </dd>
+
+      <dt class="text-primary">Duración</dt>
+      <dd>
+        <p class="ms-md-3">
+          21 días
+        </p>
+      </dd>
+
+      <dt class="text-primary">Fecha de inicio</dt>
+      <dd>
+        <p class="ms-md-3">Sin establecer<p>
+      </dd>
+    </dl>
+  </div>
+</div>
+
+<dl>
+  <dt class="text-primary">Objetivos</dt>
+  <dd>
+    <p class="ms-md-3">
+      Probar la eficacia de una intervención móvil para el aumento de las acciones alineadas con los valores personales. 
+    </p>
+  </dd>
+
+  <dt class="text-primary">Descripción</dt>
+  <dd>
+    <p class="ms-md-3">
+      El estudio consiste en recibir una serie de notificaciones móviles durante 21 días con diferentes mensajes e instrucciones con el objetivo de incentivar la acción basada en valores.
+    </p>
+  </dd>
+
+  <!--
+  <dt class="text-primary">Población objetivo</dt>
+  <dd>
+    <p class="ms-md-3">
+      Tr. emocionales, adaptativos, TLP, por juego y supervivientes de cáncer de mama.
+    </p>
+  </dd>
+  -->
+</dl>
+
+<p class="text-center text-primary lead">
+  #Intervención #Valores #EMI #Online
+</p>

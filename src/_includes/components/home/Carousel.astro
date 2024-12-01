@@ -1,0 +1,124 @@
+---
+import CardFocal from '$components/home/cards/CardFocal.astro'
+import CardLong from '$components/home/cards/CardLong.astro'
+import CardEmia from '$components/home/cards/CardEmia.astro'
+import CardValor from '$components/home/cards/CardValor.astro'
+import CardMrt from '$components/home/cards/CardMrt.astro'
+import CardForta from '$components/home/cards/CardForta.astro'
+---
+
+<!--
+  style="
+    height: 70svh;
+    overflow: hidden;
+    background-color: rgba(var(--bs-primary-rgb), 0.2);
+  "
+-->
+
+<div
+  style="
+    background-color: rgba(var(--bs-primary-rgb), 0.2);
+  "
+  class="carousel slide p-0 p-lg-4 py-3 rounded"
+  id="carouselExample">
+  <div class="carousel-indicators">
+    <button
+      style="filter: invert(1)"
+      class="active"
+      data-bs-target="#carouselExample"
+      data-bs-slide-to="0"
+      aria-current="true"
+      aria-label="Slide 1"
+      type="button"></button>
+
+    <button
+      style="filter: invert(1)"
+      data-bs-target="#carouselExample"
+      data-bs-slide-to="1"
+      aria-current="true"
+      aria-label="Slide 2"
+      type="button"></button>
+
+    <button
+      style="filter: invert(1)"
+      data-bs-target="#carouselExample"
+      data-bs-slide-to="2"
+      aria-current="true"
+      aria-label="Slide 3"
+      type="button"></button>
+
+    <button
+      style="filter: invert(1)"
+      data-bs-target="#carouselExample"
+      data-bs-slide-to="3"
+      aria-current="true"
+      aria-label="Slide 4"
+      type="button"></button>
+
+    <button
+      style="filter: invert(1)"
+      data-bs-target="#carouselExample"
+      data-bs-slide-to="4"
+      aria-current="true"
+      aria-label="Slide 5"
+      type="button"></button>
+
+    <button
+      style="filter: invert(1)"
+      data-bs-target="#carouselExample"
+      data-bs-slide-to="5"
+      aria-current="true"
+      aria-label="Slide 6"
+      type="button"></button>
+  </div>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <CardFocal />
+    </div>
+
+    <div class="carousel-item">
+      <CardLong />
+    </div>
+
+    <div class="carousel-item">
+      <CardEmia />
+    </div>
+
+    <div class="carousel-item">
+      <CardValor />
+    </div>
+
+    <div class="carousel-item">
+      <CardMrt />
+    </div>
+
+    <div class="carousel-item">
+      <CardForta />
+    </div>
+  </div>
+
+  <button
+    style="filter: invert(1)"
+    class="d-none d-md-block carousel-control-prev"
+    data-bs-target="#carouselExample"
+    data-bs-slide="prev"
+    type="button">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+
+  <button
+    style="filter: invert(1)"
+    class="d-none d-md-block carousel-control-next"
+    data-bs-target="#carouselExample"
+    data-bs-slide="next"
+    type="button">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<script>
+  import 'bootstrap/js/dist/carousel'
+</script>
