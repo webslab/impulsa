@@ -1,0 +1,105 @@
+---
+import { Image } from 'astro:assets'
+
+import imageLong from '$images/study-long.jpg'
+---
+
+<h4 class="mb-4 text-center h3">
+  <u>Estudio longitudinal</u>
+</h4>
+
+<div class="row">
+  <div class="col col-xl-5 col-xxl-4 d-none d-lg-block">
+    <Image
+      loading="lazy"
+      class="img-fluid rounded"
+      src={imageLong}
+      format={'webp'}
+      widths={[540, 720]}
+      sizes={`(max-width: 1200px) 540px, 720px`}
+      alt="computer tablet phone over a desk"/>
+  </div>
+
+  <div class="col">
+    <dl>
+      <dt class="text-primary">Participación</dt>
+      <dd>
+        <p class="ms-3">
+          <span
+            style="
+              display: list-item;
+              list-style-position: inside;
+            "
+            class="text-success">Abierto</span>
+            <a href="#">Haz click para participar</a>
+        </p>
+      </dd>
+
+      <dt class="text-primary">Contacto</dt>
+      <dd>
+        <p class="ms-md-3">
+          <a href="mailto:impulsa.prometeo@gmail.com">impulsa.prometeo@gmail.com</a>
+        </p>
+      </dd>
+
+      <dt class="text-primary">¿En qué estado se encuentra?</dt>
+      <dd>
+        <p class="ms-md-3">
+          En proceso de reclutamiento
+        </p>
+      </dd>
+
+      <dt class="text-primary">Tipo de estudio</dt>
+      <dd>
+        <p class="ms-md-3">Evaluación</p>
+      </dd>
+
+      <dt class="text-primary">Fecha de inicio</dt>
+      <dd>
+        <p class="ms-md-3">Julio 2023</p>
+      </dd>
+
+      <dt class="text-primary">Duración</dt>
+      <dd>
+        <p class="ms-md-3">
+          4 meses
+        </p>
+      </dd>
+
+      <dt class="text-primary">Población objetivo</dt>
+      <dd>
+        <p class="ms-md-3">
+          Población general mayor de edad
+        </p>
+      </dd>
+
+      <dt class="text-primary">Objetivos</dt>
+      <dd>
+        <p class="ms-md-3">
+          Estudiar las relaciones entre valores, fortalezas, bienestar y psicopatología a través del tiempo. 
+        </p>
+      </dd>
+    </dl>
+  </div>
+
+  <dl>
+    <dt class="text-primary">Descripción</dt>
+    <dd>
+      <p class="ms-md-3">
+        Este estudio consiste en responder cuatro encuestas en distintos momentos en distintos momentos temporales, centradas en tu bienestar, sintomatología clínica (como ansiedad o depresión), valores y fortalezas personales. Al completar la primera encuesta (duración 30’ aprox.), recibirás un informe personalizado que te mostrará cuáles son tus valores y fortalezas principales, revelando aquello que más valoras en la vida y los aspectos en los que eres especialmente bueno/a.
+      </p>
+
+      <p class="ms-md-3">
+        Poco después de recibir este informe, te llegará la segunda encuesta al correo electrónico proporcionado en la primera encuesta (duración 15’ aprox.). Al completar ambas encuestas, participarás en el sorteo de una tarjeta regalo de Amazon de 10€. Dos meses después, recibirás la tercera encuesta (duración 15’ aprox.), y al responderla, seguirás acumulando oportunidades de ganar en el segundo sorteo de una tarjeta Amazon de 10€. Cuatro meses después de iniciar el estudio, te llegará la cuarta y última encuesta (duración 15’ aprox.). Al finalizarla, entrarás en el sorteo de una tarjeta regalo de Decathlon de 15€.
+      </p>
+
+      <p class="ms-md-3">
+        Es importante mencionar que el primer sorteo ya se ha realizado, pero aún puedes participar en los próximos sorteos completando las encuestas que quedan.
+      </p>
+    </dd>
+  </dl>
+
+  <p class="text-center text-primary lead">
+    #Evaluación #Online #Bienestar
+  </p>
+</div>

@@ -1,0 +1,106 @@
+---
+import { Image } from 'astro:assets'
+
+import imageEmia from '$images/study-emia.jpg'
+---
+
+<h4 class="mb-4 text-center h3">
+  <u>Estudio EMIA</u>
+</h4>
+
+<div class="row">
+  <div class="col d-none d-lg-block">
+    <Image
+      loading="lazy"
+      class="img-fluid mb-4 rounded"
+      src={imageEmia}
+      format={'webp'}
+      widths={[540, 720]}
+      sizes={`(max-width: 1200px) 540px, 720px`}
+      alt="using phone outdoor"/>
+  </div>
+
+  <div class="col">
+    <dl>
+      <dt class="text-primary">Participación</dt>
+      <dd>
+        <p class="ms-3">
+          <span
+            style="
+              display: list-item;
+              list-style-position: inside;
+            "
+            class="text-success">Abierto
+            <a
+              href="mailto:mireia.santamaria@uv.es@?subject=Participar estudio Emia">
+              Haz click para participar
+            </a>
+          </span>
+        </p>
+      </dd>
+
+      <dt class="text-primary">¿En qué estado se encuentra?</dt>
+      <dd>
+        <p class="ms-md-3">
+          En proceso de reclutamiento
+        </p>
+      </dd>
+
+      <dt class="text-primary">Tipo de estudio</dt>
+      <dd>
+        <p class="ms-md-3">Evaluación</p>
+      </dd>
+
+      <dt class="text-primary">Duración</dt>
+      <dd>
+        <p class="ms-md-3">
+          11 días
+        </p>
+      </dd>
+
+      <dt class="text-primary">Fecha de inicio</dt>
+      <dd>
+        <p class="ms-md-3">Diciembre 2023</p>
+      </dd>
+    </dl>
+  </div>
+</div>
+
+<dl>
+  <dt class="text-primary">Objetivos</dt>
+  <dd>
+    <p class="ms-md-3">
+      Estudiar las variaciones diarias de los valores, fortalezas, bienestar y psicopatología y las relaciones entre sus relaciones. 
+    </p>
+  </dd>
+
+  <dt class="text-primary">Descripción</dt>
+  <dd>
+    <p class="ms-md-3">
+      Este estudio utiliza un método llamado EMA (ecological momentary assessment o evaluación ecológica momentánea), un diseño experimental que permite recoger información en tiempo real dentro del contexto diario y natural de cada participante, estés donde estés. Para ello, deberás descargar una aplicación de salud mental que te enviará 4 notificaciones al día. Cada notificación incluirá preguntas breves sobre tu bienestar, síntomas, valores y fortalezas, permitiéndote llevar un registro continuo de distintos aspectos positivos de tu vida.
+    </p>
+
+    <p class="ms-md-3">
+      Es importante saber que, para acceder a este estudio, es necesario haber completado previamente el estudio longitudinal de 4 meses.
+    </p>
+  </dd>
+
+  <dt class="text-primary">Población objetivo</dt>
+  <dd>
+    <p class="ms-md-3">
+      Población general mayor de edad
+    </p>
+  </dd>
+
+  <dt class="text-primary">Contacto</dt>
+  <dd>
+    <p class="ms-md-3">
+      <a href="mailto:impulsa.prometeo@gmail.com">impulsa.prometeo@gmail.com</a>
+    </p>
+  </dd>
+</dl>
+
+
+<p class="text-center text-primary lead">
+  #Evaluación #EMA #Online
+</p>
