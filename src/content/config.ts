@@ -1,8 +1,12 @@
 import { defineCollection, z } from "astro:content";
 
+type Image = {
+	image: () => z.ZodTypeAny;
+};
+
 const membersCollection = defineCollection({
 	type: "data",
-	schema: ({ image }) =>
+	schema: ({ image }: Image) =>
 		z.object({
 			id: z.number(),
 			group: z.number(),

@@ -1,5 +1,8 @@
 # TODO:
 
+- [ ] docs: create base branch to follow base template
+  - required for CI
+- [ ] jodit: plugin clean html
 - [ ] template: ignore some pages
 - [x] editor: add class _img-fluid_ for images
   - solved by css styles
