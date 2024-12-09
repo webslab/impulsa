@@ -6,7 +6,7 @@ import purgecss from "astro-purgecss";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-	site: "https://base.lab.kennycallado.dev",
+	site: "https://impulsa.lab.kennycallado.dev",
 	server: {
 		port: 3000,
 	},
