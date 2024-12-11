@@ -5,9 +5,9 @@ services:
     ports:
       - "8000:80"
     volumes:
-      # - ./dist/impulsa:/var/www/html/impulsa
+      # - ./dist/base:/var/www/html/impulsa
       # - ./dist:/var/www/html
-      # dev: ⬇️
+      #
       - ./public:/var/www/html/impulsa
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
 
