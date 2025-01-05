@@ -7,14 +7,6 @@ import CardMrt from '$components/home/cards/CardMrt.astro'
 import CardForta from '$components/home/cards/CardForta.astro'
 ---
 
-<!--
-  style="
-    height: 70svh;
-    overflow: hidden;
-    background-color: rgba(var(--bs-primary-rgb), 0.2);
-  "
--->
-
 <div
   style="
     background-color: rgba(var(--bs-primary-rgb), 0.2);
@@ -99,8 +91,8 @@ import CardForta from '$components/home/cards/CardForta.astro'
   </div>
 
   <button
-    style="filter: invert(1)"
-    class="d-none d-md-block carousel-control-prev"
+    style="filter: invert(1); display: block; position: absolute; top: 90%;"
+    class="carousel-control-prev"
     data-bs-target="#carouselExample"
     data-bs-slide="prev"
     type="button">
@@ -109,8 +101,8 @@ import CardForta from '$components/home/cards/CardForta.astro'
   </button>
 
   <button
-    style="filter: invert(1)"
-    class="d-none d-md-block carousel-control-next"
+    style="filter: invert(1); display: block; position: absolute; top: 90%;"
+    class="carousel-control-next"
     data-bs-target="#carouselExample"
     data-bs-slide="next"
     type="button">
