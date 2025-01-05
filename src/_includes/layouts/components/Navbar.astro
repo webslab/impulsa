@@ -15,6 +15,15 @@ const { loginSelector } = Astro.props;
 .nav-item {
   margin: 0 0.7rem;
 }
+.navbar-brand {
+  padding-inline: 0.5em;
+  box-shadow: inset 0 -70px 70px rgb(0 0 0 / 20%);
+}
+
+.navbar-brand:hover {
+  box-shadow: inset 0 -3em 3em rgb(250 250 250 / 60%);
+  transition: box-shadow 0.5s;
+}
 </style>
 
 <nav
@@ -22,16 +31,16 @@ const { loginSelector } = Astro.props;
   class="navbar navbar-expand-lg shadow-sm">
   <div class="container-xxl bd-gutter flex-wrap flex-lg-nowrap">
     <a
-      class="navbar-brand"
+      class="navbar-brand rounded"
       href="/">
-      <!-- <span class="fw-bold text-primary">Base</span> -->
+
       <Image
         class="image-fluid w-100"
         style="max-height: 2.5rem"
         src={brand}
         format={'webp'}
-        widths={[200]}
-        sizes={`200px`}
+        widths={[400]}
+        sizes={`400px`}
         alt="Project Brand"/>
     </a>
 
