@@ -60,6 +60,11 @@ main {
   padding: 2rem;
 }
 
+::selection {
+  background-color: rgba(var(--bs-primary-rgb), 0.5);
+  color: white;
+}
+
 .text-blue {
   color: var(--bs-blue);
 }
@@ -74,10 +79,6 @@ main {
 
 .progress-bar {
   background-color: var(--bs-primary);
-}
-
-.active {
-  // background-color: var(--bs-primary);
 }
 
 .nav-pills .nav-link.active,
@@ -102,7 +103,6 @@ main {
 }
 
 .btn-check:checked + .btn {
-  // background-color: var(--bs-primary);
   border-color: var(--bs-primary);
 }
 
