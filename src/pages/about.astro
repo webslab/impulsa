@@ -14,6 +14,10 @@ const groupOne = await getCollection('members', ({ data }) => {
 const groupTwo = await getCollection('members', ({ data }) => {
   return data.group === 2;
 })
+
+const groupThree = await getCollection('members', ({ data }) => {
+  return data.group === 3;
+})
 ---
 
 <style>
@@ -133,6 +137,42 @@ img {
     <div class="row gap-3 justify-content-center">
       {
       groupTwo.map((member) => (
+      <div
+        style="position: relative; margin-top: 100px;"
+        class="card col-12 col-sm-10 col-md-5 col-lg-4 col-xl-3">
+        <Image
+          style="position: absolute; top: -100px; left: 50%; transform: translateX(-50%);"
+          class="mt-2 mx-auto"
+          format={'webp'}
+          width={member.data.photo.width / 5}
+          height={member.data.photo.height / 5}
+          src={member.data.photo}
+          alt="member photo" />
+
+        <div class="mt-5 card-body text-center">
+          <h3 class="card-title h5 text-primary">
+            {member.data.name}
+          </h3>
+
+          <p class="lead">{member.data.position}</p>
+          <p class="card-text">
+            {member.data.department}
+          </p>
+        </div>
+      </div>
+      ))
+      }
+    </div>
+  </section>
+
+  <hr class="w-75 mx-auto my-4 border border-primary" />
+
+  <section class="px-0 px-md-4 py-4 mx-auto">
+    <h2 class="h4">Otros participantes:</h2>
+
+    <div class="row gap-3 justify-content-center">
+      {
+      groupThree.map((member) => (
       <div
         style="position: relative; margin-top: 100px;"
         class="card col-12 col-sm-10 col-md-5 col-lg-4 col-xl-3">
