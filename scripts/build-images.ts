@@ -8,7 +8,7 @@ const IMAGE_NAME = deno_file.name;
 const VERSION = deno_file.version;
 const OWNER = Deno.env.get("DB_NS") || "webslab";
 
-const USERNAME = Deno.env.get("DOCKER_USERNAME") || Deno.env.get("DB_NS");
+const USERNAME = Deno.env.get("DOCKER_USERNAME") || OWNER;
 const PASSWORD = Deno.env.get("DOCKER_TOKEN");
 
 const platforms = PLATFORMS.join(",");
@@ -93,6 +93,7 @@ async function createManifests(): Promise<boolean> {
 }
 
 async function buildDist(): Promise<boolean> {
+	await $`deno install`;
 	return (await $`deno task build`).exitCode === 0;
 }
 
