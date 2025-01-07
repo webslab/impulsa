@@ -17,8 +17,8 @@ const repo = `${OWNER}/${IMAGE_NAME}`;
 async function main() {
 	console.log(`Building docker images for ${IMAGE_NAME} - v${VERSION}...\n`);
 
-	if (!Deno.env.get("DB_URL")) throw new Error("DB_URL is not set");
-	if (!Deno.env.get("DB_NS")) throw new Error("DB_NS is not set");
+	// if (!Deno.env.get("DB_URL")) throw new Error("DB_URL is not set");
+	if (!OWNER) throw new Error("DB_NS is not set");
 	if (!USERNAME) throw new Error("DOCKER_USERNAME is not set");
 	if (!PASSWORD) throw new Error("DOCKER_TOKEN is not set");
 
