@@ -7,7 +7,8 @@ export const SITE_DESCRIPTION = "Welcome to Impulsa!";
 
 // TODO: Change to production URL
 export const DB = {
-	url: "ws://localhost:8000/",
+	// url: "ws://localhost:8000/",
+	url: `wss://surreal.${WEBSLAB_DOMAIN}/`,
 	config: {
 		access: "user",
 		database: WEBSLAB_PROJECT,
