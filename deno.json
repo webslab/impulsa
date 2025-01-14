@@ -1,6 +1,6 @@
 {
-	"version": "0.2.8",
-	"name": "impulsa",
+  "name": "impulsa",
+	"version": "0.2.9",
 	"tasks": {
 		"dev": "astro dev",
 		"astro": "astro",

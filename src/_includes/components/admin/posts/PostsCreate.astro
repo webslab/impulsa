@@ -1,7 +1,7 @@
-<link
-  rel="stylesheet"
-  onload="this.onload=null;this.rel='stylesheet'"
-  href="https://unpkg.com/jodit@4.0.1/es2021/jodit.min.css" />
+---
+import '$styles/editor.scss'
+import HeroPicker from './HeroPicker.astro'
+---
 
 <div class="row">
   <div class="col-md-8">
@@ -27,9 +27,7 @@
     </div>
 
     <div class="mb-3">
-      <label for="hero" class="form-label">Hero Image</label>
-      <input type="text" class="form-control" id="hero" />
-      <!-- <input type="file" class="form-control" id="hero" /> -->
+      <HeroPicker id="hero" />
     </div>
 
     <img id="hero-preview" class="img-fluid rounded" />
