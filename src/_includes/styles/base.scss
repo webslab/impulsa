@@ -10,7 +10,8 @@
   src: URL("/fonts/Gilroy-Bold.ttf") format("truetype");
 }
 
-$primary: teal;
+$primary: #613583;
+$secondary: teal;
 $font-size-base: 1.25rem;
 $font-family-sans-serif:
   "Gilroy",
@@ -74,6 +75,7 @@ b,
 }
 
 h1 {
+  // color: $primary;
   color: var(--bs-primary);
   text-align: center;
 }

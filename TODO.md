@@ -1,15 +1,6 @@
 # TODO:
 
-- [ ] modules: remove pages option
-- [ ] about: waiting for feedback
-- [x] IPSITEC: mayusculas
-- [ ] estado en negrita
-- [ ] about: imagen grupo
-- [ ] about: Rosa
-- [ ] carousel: swipe
-
 - [ ] DB: (shared) url should be host and live select the protocol
-
 - [ ] astro: update to 5.0.3
 - [ ] create user: modules tab first
 - [ ] docs: create base branch to follow base template
