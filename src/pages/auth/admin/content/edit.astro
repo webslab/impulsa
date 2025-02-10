@@ -68,7 +68,7 @@ import HeroPicker from '$components/admin/posts/HeroPicker.astro'
     getWlDatabase().then(async (wlDatabase) => {
       import('$lib/hero.ts')
 
-      wlDatabase.addEventListener('wl-task:completed', (evt: CustomEvent) => {
+      wlDatabase.addEventListener('wl-task:completed', async (evt: CustomEvent) => {
         const db = authService.getDb()
 
         const add = document.getElementById('add-page')
@@ -108,20 +108,6 @@ import HeroPicker from '$components/admin/posts/HeroPicker.astro'
         */
 
         save.addEventListener('click', savePost)
-
-          const post = {
-            hero: hero.value,
-            title: title.value,
-            author: new StringRecordId(author.author),
-            content: pages,
-            publish: new Date(publish.value)
-          }
-
-          // TODO: why?
-          // @ts-ignore: check
-          const res = await db.merge(new StringRecordId(postId), post)
-          console.log(res)
-        })
 
         // NOTE: disable pages
         /**
