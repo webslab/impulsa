@@ -8,6 +8,11 @@ const { pagid } = Astro.props;
 
 <div class="d-none justify-content-around" pag-id={pagid}>
   <button id="prev" class="btn btn-primary">Prev</button>
+
+  <div>
+    <span>hola</span>
+  </div>
+
   <button id="submit" class="btn btn-primary d-none">Submit</button>
   <button id="next" class="btn btn-primary">Next</button>
 </div>
@@ -20,7 +25,7 @@ const { pagid } = Astro.props;
 
   const slug = new URLSearchParams(globalThis.location.search).get("slug");
 
-  const pagination = document.querySelector("[pag-id]");
+  const pagination = document.querySelector("[pagid]");
   const article = document.querySelector("#article");
   const submit = pagination.querySelector("#submit");
   const prev = pagination.querySelector("#prev");
