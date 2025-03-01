@@ -68,7 +68,7 @@ import HeroPicker from '$components/admin/posts/HeroPicker.astro'
     getWlDatabase().then(async (wlDatabase) => {
       import('$lib/hero.ts')
 
-      wlDatabase.addEventListener('wl-task:completed', async (evt: CustomEvent) => {
+      wlDatabase.addEventListener('wl-task:completed', (evt: CustomEvent) => {
         const db = authService.getDb()
 
         const add = document.getElementById('add-page')
@@ -79,7 +79,7 @@ import HeroPicker from '$components/admin/posts/HeroPicker.astro'
         const publish = document.getElementById('publish') as HTMLInputElement
         const content = document.getElementById('post-content') as HTMLTextAreaElement
         const tableName = document.getElementById('table-name')
-        // const pagesContainer = document.getElementById('pages-container') NOTE: disable pages
+        const pagesContainer = document.getElementById('pages-container')
 
         // hero
         const foo = document.getElementById('foo')
@@ -99,19 +99,14 @@ import HeroPicker from '$components/admin/posts/HeroPicker.astro'
 
         tableName.innerText = table.charAt(0).toUpperCase() + table.slice(1)
 
-        // NOTE: disable pages
-        /**
         if (table === 'module') {
           pagesList(pages)
           pagesContainer.classList.remove('d-none')
         }
-        */
 
         save.addEventListener('click', savePost)
 
-        // NOTE: disable pages
-        /**
-        add.addEventListener('click', (evt) => {
+        add.addEventListener('click', () => {
           const pagesList = document.getElementById('pages-list')
           const item = document.createElement('li')
 
@@ -135,7 +130,6 @@ import HeroPicker from '$components/admin/posts/HeroPicker.astro'
           item.firstElementChild.click()
           savePost()
         })
-        */
 
         async function savePost() {
           pages[currentPage] = jodit.currentPlace.editor.innerHTML
@@ -201,8 +195,6 @@ import HeroPicker from '$components/admin/posts/HeroPicker.astro'
           })
         }
 
-        // NOTE: disable pages
-        /**
         function pagesList(pages: string[]) {
           const pagesList = document.getElementById('pages-list')
           const items = pagesList.querySelectorAll('li')
@@ -211,7 +203,6 @@ import HeroPicker from '$components/admin/posts/HeroPicker.astro'
             if (item.dataset.index) addItemListener(item, index, pages)
           })
         }
-        */
       })
     })
   </script>

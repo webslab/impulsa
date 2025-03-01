@@ -3,17 +3,8 @@ import { Image } from 'astro:assets'
 
 import BaseLayout from '$layouts/Base.astro'
 
-import logoP from '$images/logo-impulsa-1080_1080.png'
+import logoP from '$images/logo-base-1080_1080.png'
 import logoC from '$images/logo-conselleria-rgb_rojo_cast.png'
-
-import Carousel from '$components/home/Carousel.astro'
-
-import SectionFocal from '$components/home/studies/SectionFocal.astro'
-import SectionLong from '$components/home/studies/SectionLong.astro'
-import SectionEmia from '$components/home/studies/SectionEmia.astro'
-import SectionValor from '$components/home/studies/SectionValor.astro'
-import SectionMrt from '$components/home/studies/SectionMrt.astro'
-import SectionForta from '$components/home/studies/SectionForta.astro'
 ---
 
 <BaseLayout
@@ -21,137 +12,36 @@ import SectionForta from '$components/home/studies/SectionForta.astro'
   admin={false}
   title="Home"
   description="Home page">
-  <section class="px-0 px-md-4 my-4 py-4 mx-auto text-center">
-    <h1>Te damos la bienvenida a</h1>
+  <h1>Welcome to Base</h1>
 
-    <div class="col col-md-6 mx-auto">
-      <Image
-        class="img-fluid ratio ratio-1x1"
-        src={logoP}
-        format={'webp'}
-        widths={[240, 540, 720, logoP.width]}
-        sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${logoP.width}px`}
-        alt="Project Logo"/>
-    </div>
+  <div class="col col-md-6 mx-auto">
+    <Image
+      class="img-fluid ratio ratio-1x1"
+      src={logoP}
+      format={'webp'}
+      widths={[240, 540, 720, logoP.width]}
+      sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${logoP.width}px`}
+      alt="Project Logo"/>
+  </div>
 
-    <div>
-      <h2 class="mb-4 h4 text-primary">
-        Un proyecto para impulsar la salud mental y el bienestar a través de intervenciones digitales
-      </h2>
-
-      <p class="px-4">
-        Financiado por las Subvenciones del programa Prometeo para grupos de excelencia de la Conselleria d'Innovació, Universitats, Ciència i Societat Digital de la Generalitat Valenciana [CIPROM/2021/041].
-      </p>
-
-      <div class="col-10 col-md-8 col-lg-6 col-xl-5 mx-auto">
+  <div class="container">
+    <div class="row">
+      <div class="col-6 col-md-3 col-lg-3 mx-auto">
         <Image
-          class="img-fluid"
+          class="img-fluid ratio ratio-16x9"
           src={logoC}
           format={'webp'}
           widths={[240, 540, logoC.width]}
           sizes={`(max-width: 360px) 240px, (max-width: 1600px) 540px, ${logoC.width}px`}
-          alt="Project Conselleria"/>
+          alt="Project Logo"/>
+      </div>
+
+      <div class="col-6 col-md-3 col-lg-3 mx-auto bg-warning">
+      </div>
+
+      <div class="col mx-auto bg-primary">
+        f
       </div>
     </div>
-  </section>
-
-  <section class="px-0 px-md-4 my-4 py-4 mx-auto">
-    <p class="lead">
-      IMPULSA es un proyecto de investigación a cargo del grupo de investigación I-PSI-TEC de la Universitat de València, que nace de la necesidad de <span class="text-primary">abordar el bienestar para promover la salud mental</span> y para ayudar en la prevención y el tratamiento de los trastornos mentales y el malestar en enfermedades médicas.
-    </p>
-
-    <p class="lead">Sus objetivos son:</p>
-
-    <ul class="list-group col col-lg-8 mx-auto my-4">
-      <li class="list-group-item d-flex p-4">
-        <span class="d-block display-4 pe-4">1</span>
-
-        <p>
-          Evaluar y comprender mejor el papel de dos componentes centrales del bienestar, <span class="text-primary">el afecto positivo</span> y la <span class="text-primary">vida basada en valores y fortalezas</span>.
-        </p>
-      </li>
-
-      <li class="list-group-item d-flex p-4">
-        <span class="d-block display-4 pe-4">2</span>
-
-        <p>
-          Diseñar y validar estrategias de intervención que potencien estos factores, y que se dispensen a través de <span class="text-primary">herramientas tecnológicas</span> que favorezcan su eficacia, eficiencia y efectividad.
-        </p>
-      </li>
-
-      <li class="list-group-item d-flex p-4">
-        <span class="d-block display-4 pe-4">3</span>
-
-        <p>
-          Co-diseñar junto a los futuros usuarios una plataforma digital de salud mental llamada <span class="text-primary">IMPULSA</span>, diseñada para ser utilizada tanto en dispositivos móviles como en la web. Esta plataforma contará con <span class="text-primary">las herramientas psicológicas</span> previamente validadas.
-        </p>
-      </li>
-    </ul>
-
-    <p class="lead">
-      Para conseguir estos objetivos, estamos investigado sobre población general y principalmente sobre 4 poblaciones clínicas y médicas (pacientes oncológicos, trastornos emocionales y adaptativos, trastorno por juego, y trastorno límite de la personalidad).
-    </p>
-  </section>
-
-  <hr />
-
-  <section class="px-0 px-md-4 my-4 py-4 mx-auto">
-    <h3 class="text-center text-primary">
-      ¿Qué estudios se están llevando a cabo?
-    </h3>
-
-    <p class="py-4 lead">
-      Actualmente se están llevando a cabo varios estudios, tanto para la recogida de datos (estudios de evaluación) como para dispensar estrategias y herramientas (estudios de intervención).
-    </p>
-
-    <Carousel />
-  </section>
-
-  <hr class="border border-primary w-75 mx-auto" />
-
-  <section
-    id="section-focal"
-    class="px-0 px-md-4 my-4 py-4 mx-auto">
-    <SectionFocal></SectionFocal>
-  </section>
-
-  <hr class="border border-primary w-75 mx-auto" />
-
-  <section
-    id="section-long"
-    class="px-0 px-md-4 my-4 py-4 mx-auto">
-    <SectionLong></SectionLong>
-  </section>
-
-  <hr class="border border-primary w-75 mx-auto" />
-
-  <section
-    id="section-emia"
-    class="px-0 px-md-4 my-4 py-4 mx-auto">
-    <SectionEmia></SectionEmia>
-  </section>
-
-  <hr class="border border-primary w-75 mx-auto" />
-
-  <section
-    id="section-valor"
-    class="px-0 px-md-4 my-4 py-4 mx-auto">
-    <SectionValor></SectionValor>
-  </section>
-
-  <hr class="border border-primary w-75 mx-auto" />
-
-  <section
-    id="section-mrt"
-    class="px-0 px-md-4 my-4 py-4 mx-auto">
-    <SectionMrt></SectionMrt>
-  </section>
-
-  <hr class="border border-primary w-75 mx-auto" />
-
-  <section
-    id="section-forta"
-    class="px-0 px-md-4 my-4 py-4 mx-auto">
-    <SectionForta></SectionForta>
-  </section>
+  </div>
 </BaseLayout>
