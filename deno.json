@@ -1,6 +1,6 @@
 {
 	"name": "impulsa",
-	"version": "0.4.5",
+  "version": "0.5.1",
 	"tasks": {
 		"dev": "astro dev",
 		"astro": "astro",
@@ -9,13 +9,12 @@
 		"build:images": "deno run -A ./scripts/build-images.ts"
 	},
 	"imports": {
-		"$components": "./src/_includes/components/*",
-		"$layouts": "./src/_includes/layouts/*",
-		"$images": "./src/_includes/images/*",
-		"$styles": "./src/_includes/styles/*",
-		"$lib": "./src/_includes/lib/*",
+		"$components/": "./src/components/",
+		"$layouts/": "./src/components/layouts/",
+		"$images/": "./src/content/images/",
+		"$lib/": "./src/lib/",
 
-		"@webslab/shared": "npm:@webslab/shared@^0.2.0",
+		"@webslab/shared": "npm:@webslab/shared@^0.3.0",
 
 		"@astrojs/lit": "npm:@astrojs/lit@^4.3.0",
 		"@astrojs/sitemap": "npm:@astrojs/sitemap@^3.2.1",
@@ -36,7 +35,7 @@
 	"compilerOptions": {
 		"jsx": "react-jsx",
 		"jsxImportSource": "solid-js",
-		"lib": ["DOM", "DOM.Iterable", "ESNext"]
+		"lib": ["DOM", "DOM.Iterable", "ESNext", "deno.ns"]
 	},
 	"fmt": {
 		"useTabs": true,

@@ -1,6 +1,6 @@
 // @ts-check
 import { defineConfig, sharpImageService } from "astro/config";
-import { WEBSLAB_PROJECT, WEBSLAB_SITE } from "./src/_includes/lib/consts.ts";
+import { WEBSLAB_PROJECT, WEBSLAB_SITE } from "$lib/consts.ts";
 
 import lit from "@astrojs/lit";
 import purgecss from "astro-purgecss";
@@ -8,6 +8,8 @@ import sitemap from "@astrojs/sitemap";
 import solidJs from "@astrojs/solid-js";
 
 export default defineConfig({
+	devToolbar: { enabled: false },
+
 	site: WEBSLAB_SITE,
 	server: {
 		port: 3000,

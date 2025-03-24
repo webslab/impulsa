@@ -6,7 +6,7 @@ services:
       - 8000:80
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
-      - ./nginx.env.template:/etc/nginx/templates/10-variables.conf.template:ro
+      - ./nginx.template.conf:/etc/nginx/templates/10-variables.conf.template:ro
       # prod:
       # - ./dist/base:/var/www/html/base
       # - ./dist:/var/www/html
@@ -28,7 +28,7 @@ services:
       - ./public:/app/resources
 
   surrealdb:
-    image: surrealdb/surrealdb:v2.0.4
+    image: surrealdb/surrealdb:v2.2.0
     # image: webslab/store-demo:latest
     network_mode: service:web
     command:
