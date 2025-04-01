@@ -2,7 +2,7 @@
 import Link from './Link.astro'
 
 import { Image } from 'astro:assets'
-import brand from '$images/brand-impulsa.png'
+import brand from '$images/brand-base.png'
 
 interface Props {
   loginSelector: string;
@@ -15,16 +15,6 @@ const { loginSelector } = Astro.props;
 .nav-item {
   margin: 0 0.7rem;
 }
-
-.navbar-brand {
-  padding-inline: 0.5em;
-  box-shadow: inset 0 -70px 70px rgb(0 0 0 / 20%);
-}
-
-.navbar-brand:hover {
-  box-shadow: inset 0 -3em 3em rgb(250 250 250 / 60%);
-  transition: box-shadow 0.5s;
-}
 </style>
 
 <nav
@@ -32,15 +22,15 @@ const { loginSelector } = Astro.props;
   class="navbar navbar-expand-lg shadow-sm">
   <div class="container-xxl bd-gutter flex-wrap flex-lg-nowrap">
     <a
-      class="navbar-brand rounded"
+      class="navbar-brand"
       href="/">
       <Image
         class="image-fluid w-100"
-        style="max-height: 2rem"
+        style="max-height: 2.5rem"
         src={brand}
         format={'webp'}
-        widths={[400]}
-        sizes={`400px`}
+        widths={[200]}
+        sizes={`200px`}
         alt="Project Brand"/>
     </a>
 
@@ -71,7 +61,7 @@ const { loginSelector } = Astro.props;
           <Link
             class="nav-link"
             href="/about/">
-            Equipo
+            About
           </Link>
         </li>
 
@@ -86,9 +76,9 @@ const { loginSelector } = Astro.props;
         <li class="nav-iteam">
           <Link
             id="nav-modules"
-            class="nav-link"
+            class="nav-link disabled"
             href="/content/modules/">
-            Formación
+            Modules
           </Link>
         </li>
 
@@ -99,7 +89,7 @@ const { loginSelector } = Astro.props;
             data-bs-toggle="dropdown"
             aria-expanded="false"
             href="#">
-            Acceso
+            Access
           </a>
 
           <ul
@@ -145,7 +135,7 @@ const { loginSelector } = Astro.props;
             <li class="px-2">
               <ul
                 id="bd-theme"
-                class="d-none d-md-flex list-group list-group-horizontal justify-content-center">
+                class="list-group list-group-horizontal justify-content-center">
                 <li
                   data-bs-theme-value="auto"
                   class="list-group-item py-1 px-2">
@@ -181,7 +171,7 @@ const { loginSelector } = Astro.props;
         const navLogin = document.getElementById('nav-login')
         const navAdmin = document.querySelectorAll('[data-admin]')
         const navLogout = document.getElementById('nav-logout')
-        // const navModules = document.getElementById('nav-modules')
+        const navModules = document.getElementById('nav-modules')
 
         document.addEventListener('DOMContentLoaded', async () => {
           try {
@@ -190,11 +180,11 @@ const { loginSelector } = Astro.props;
             if (authService.isAuthenticated()) {
               navLogin.classList.add('disabled')
               navLogout.classList.remove('disabled')
-              // navModules.classList.remove('disabled')
+              navModules.classList.remove('disabled')
             } else {
               navLogin.classList.remove('disabled')
               navLogout.classList.add('disabled')
-              // navModules.classList.add('disabled')
+              navModules.classList.add('disabled')
             }
 
             if (authService.isAuthenticated() && authService.isAdministrator()) {

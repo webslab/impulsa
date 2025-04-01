@@ -6,7 +6,7 @@ services:
       - ./nginx.default.conf:/etc/nginx/conf.d/default.conf
       - ./nginx.variables.conf:/etc/nginx/templates/10-variables.conf.template:ro
       # 🔽 prod:
-      # - ../dist/impulsa:/var/www/html/impulsa
+      # - ../dist/base:/var/www/html/base
       # - ../dist:/var/www/html
       # 🔽 dev:
       - ../public:/var/www/html
@@ -26,9 +26,9 @@ services:
     image: webslab/filefind:latest
     volumes:
       # 🔽 prod:
-      # - ./dist:/app/resources
+      # - ../dist:/app/resources
       # 🔽 dev:
-      - ./public:/app/resources
+      - ../public:/app/resources
 
     network_mode: service:web
 
