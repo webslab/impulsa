@@ -26,9 +26,9 @@ services:
     image: webslab/filefind:latest
     volumes:
       # 🔽 prod:
-      # - ./dist:/app/resources
+      # - ../dist:/app/resources
       # 🔽 dev:
-      - ./public:/app/resources
+      - ../public:/app/resources
 
     network_mode: service:web
 
